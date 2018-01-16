@@ -2,9 +2,9 @@ FROM java:8
 MAINTAINER kunitaya
 
 # install mysql-client
-RUN apt-get update
-RUN apt-get -y install mysql-client
-RUN apt-get clean all
+RUN apt-get update && \
+    apt-get -y install mysql-client && \
+    apt-get clean all
 
 # download JobScheduler Master
 ADD https://download.sos-berlin.com/JobScheduler.1.11/jobscheduler_linux-x64.1.11.5.tar.gz /usr/local/src/
