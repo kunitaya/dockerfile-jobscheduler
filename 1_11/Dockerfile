@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get clean all
 
 # download JobScheduler Master
-ADD https://download.sos-berlin.com/JobScheduler.1.11/jobscheduler_linux-x64.1.11.5.tar.gz /usr/local/src/
+ADD https://download.sos-berlin.com/JobScheduler.1.11/jobscheduler_linux-x64.1.11.7.tar.gz /usr/local/src/
 RUN test -e /usr/local/src/jobscheduler_linux-x64.1.11.7.tar.gz && \
     tar zxvf /usr/local/src/jobscheduler_linux-x64.1.11.7.tar.gz -C /usr/local/src/ && \
     rm -f /usr/local/src/jobscheduler_linux-x64.1.11.7.tar.gz && \
