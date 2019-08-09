@@ -1,9 +1,9 @@
-FROM java:8
+FROM openjdk:8
 MAINTAINER kunitaya
 
 # install mysql-client
-RUN apt-get update && \
-    apt-get -y install mysql-client && \
+RUN apt-get update -qq && \
+    apt-get -y install apt-utils mysql-client && \
     apt-get clean all
 
 # download JobScheduler Master
