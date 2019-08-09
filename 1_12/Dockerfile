@@ -7,11 +7,11 @@ RUN apt-get update && \
     apt-get clean all
 
 # download JobScheduler Master
-ADD https://download.sos-berlin.com/JobScheduler.1.12/jobscheduler_linux-x64.1.12.3.tar.gz /usr/local/src/
-RUN test -e /usr/local/src/jobscheduler_linux-x64.1.12.3.tar.gz && \
-    tar zxvf /usr/local/src/jobscheduler_linux-x64.1.12.3.tar.gz -C /usr/local/src/ && \
-    rm -f /usr/local/src/jobscheduler_linux-x64.1.12.3.tar.gz && \
-    ln -s /usr/local/src/jobscheduler.1.12.3 /usr/local/src/jobscheduler
+ADD https://download.sos-berlin.com/JobScheduler.1.12/jobscheduler_linux-x64.1.12.9.tar.gz /usr/local/src/
+RUN test -e /usr/local/src/jobscheduler_linux-x64.1.12.9.tar.gz && \
+    tar zxvf /usr/local/src/jobscheduler_linux-x64.1.12.9.tar.gz -C /usr/local/src/ && \
+    rm -f /usr/local/src/jobscheduler_linux-x64.1.12.9.tar.gz && \
+    ln -s /usr/local/src/jobscheduler.1.12.9 /usr/local/src/jobscheduler
 COPY jobscheduler_install.xml /usr/local/src/jobscheduler/install.xml
 
 COPY init.sh /usr/local/bin/init_scheduler.sh
